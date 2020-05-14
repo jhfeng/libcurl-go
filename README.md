@@ -1,11 +1,8 @@
-go-curl
+libcurl-go
 =======
 
-[![Build Status](https://secure.travis-ci.org/andelf/go-curl.png?branch=master)](http://travis-ci.org/andelf/go-curl)
+golang libcurl(curl) binding, clonging from https://github.com/andelf/go-curl
 
-my golang libcurl(curl) binding.
-
-See more examples in ./examples/ directory~!
 
 LICENSE
 -------
@@ -25,49 +22,20 @@ Current Development Status
 How to Install
 --------------
 
-Make Sure You Have libcurl (and its develop headers, static/dynamic libs) installed!
+Make Sure You Have OQS libcurl https://github.com/open-quantum-safe/oqs-demos/tree/master/curl (and its develop headers, static/dynamic libs) installed!
 
 
-    $ go get -u github.com/andelf/go-curl
+    $ go get -u github.com/jhfeng/libcurl-go
 
 Current Status
 --------------
 
  * Linux x64
-   * passed go1 (ArchLinux)
- * Windows x86
-   * passed go1 (win7, mingw-gcc 4.5.2, curl 7.22.0)
+   
  * Mac OS
-   * passed go1 (Mac OS X 10.7.3, curl 7.21.4)
-
-Sample Program
+ 
+ 
+ Sample code
 --------------
-
-```go
-package main
-
-import (
-    "fmt"
-    curl "github.com/andelf/go-curl"
-)
-
-func main() {
-    easy := curl.EasyInit()
-    defer easy.Cleanup()
-
-    easy.Setopt(curl.OPT_URL, "http://www.baidu.com/")
-
-    // make a callback function
-    fooTest := func (buf []byte, userdata interface{}) bool {
-        println("DEBUG: size=>", len(buf))
-        println("DEBUG: content=>", string(buf))
-        return true
-    }
-
-    easy.Setopt(curl.OPT_WRITEFUNCTION, fooTest)
-
-    if err := easy.Perform(); err != nil {
-        fmt.Printf("ERROR: %v\n", err)
-    }
-}
-```
+ See more examples in ./examples/ directory~!
+   
