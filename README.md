@@ -41,7 +41,7 @@ Current Status
 
  How to build OQS curl
 ----------------------
-
+```
 // define the Curl version to be baked in
 export CURL_VERSION=7.69.1
 
@@ -85,3 +85,4 @@ patch -p1 < /opt/patch-7.69.1.oqs.txt
 CPPFLAGS="-I/opt/ossl-src/oqs/include" LDFLAGS=-Wl,-R${INSTALLDIR}/lib  \
     ./configure --prefix=${INSTALLDIR} --with-ssl=${INSTALLDIR} && \
     make && make install
+```
