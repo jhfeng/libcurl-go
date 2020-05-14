@@ -3,7 +3,7 @@ package main
 import (
 	"os"
 
-	curl "github.com/andelf/go-curl"
+	curl "github.com/jhfeng/libcurl-go"
 )
 
 func write_data(ptr []byte, userdata interface{}) bool {

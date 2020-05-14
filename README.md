@@ -25,7 +25,7 @@ How to Install
 Make Sure You Have OQS libcurl https://github.com/open-quantum-safe/oqs-demos/tree/master/curl (and its develop headers, static/dynamic libs) installed!
 
 
-    $ go get -u github.com/jhfeng/libcurl-go
+    $ PKG_CONFIG_PATH=/opt/oqssa/lib/pkgconfig go get -u github.com/jhfeng/libcurl-go
 
 Current Status
 --------------

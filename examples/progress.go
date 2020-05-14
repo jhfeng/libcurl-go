@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	curl "github.com/andelf/go-curl"
+	curl "github.com/jhfeng/libcurl-go"
 	"time"
 )
 

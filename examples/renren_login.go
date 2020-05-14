@@ -3,7 +3,7 @@ package main
 
 import (
 	"flag"
-	curl "github.com/andelf/go-curl"
+	curl "github.com/jhfeng/libcurl-go"
 )
 
 func main() {
