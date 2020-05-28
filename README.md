@@ -58,7 +58,7 @@ git clone --single-branch --branch master https://github.com/open-quantum-safe/l
     wget https://curl.haxx.se/download/curl-${CURL_VERSION}.tar.gz && tar -zxvf curl-${CURL_VERSION}.tar.gz
     
 // Add curl patchfile
-wget https://github.com/open-quantum-safe/oqs-demos/blob/master/curl/patch-7.69.1.oqs.txt  
+wget https://raw.githubusercontent.com/open-quantum-safe/oqs-demos/master/curl/patch-7.69.1.oqs.txt
 
 // build liboqs shared and static
 cd /opt/liboqs
